@@ -1,0 +1,143 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.BackGround{
+  width: 100%;
+  background-color: rgb(30, 30, 30);
+  float: left;
+}
+.BBtest{
+  width: 100%; 
+
+}
+
+
+.bg{
+  width: 1902px; 
+  position: absolute;
+  float: left;
+  background-color: rgba(255, 255, 255, 0.6);
+
+}
+
+.List-congviec { 
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 520px;
+  min-height: 600px;
+  background: rgba(255, 255, 255, 0.6);
+  text-align: center;
+  margin: 100px auto 100px;
+  border-radius: 10px;
+  border: 5px dashed rgb(38, 0, 255);
+  padding-bottom: 32px;
+}
+
+.h1-class {
+  margin: 32px 0;
+  color: rgb(38, 0, 255);
+  font-size: 24px;
+}
+
+.complete {
+  text-decoration: line-through;
+  opacity: 0.4;
+}
+
+.form-congviec {
+  margin-bottom: 32px;
+}
+
+.input-congviec {
+  padding: 14px 32px 14px 16px;
+  border-radius: 4px 0 0 4px;
+  border: 2px solid #5d0cff;
+  outline: none;
+  width: 320px;
+  
+  color: #d10000;
+}
+
+.input-congviec::placeholder {
+  color: #000000;
+}
+
+.button-congviec {
+  padding: 16px;
+  border: none;
+  border-radius: 0 4px 4px 0;
+  cursor: pointer;
+  outline: none;
+  background: linear-gradient(
+    90deg,
+    rgba(93, 12, 255, 1) 0%,
+    rgba(155, 0, 250, 1) 100%
+  );
+  color: #fff;
+  text-transform: capitalize;
+}
+
+.input-congviec.edit {
+  border: 2px solid #149fff;
+}
+
+.button-congviec.edit {
+  background: linear-gradient(
+    90deg,
+    rgba(20, 159, 255, 1) 0%,
+    rgba(17, 122, 255, 1) 100%
+  );
+  padding: 16px 22px;
+}
+
+.todo-container {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+}
+
+.congviec-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 4px auto;
+  color: #fff;
+  background: rgb(255, 118, 20);
+  padding: 16px;
+  border-radius: 8px;  
+  width: 90%;
+}
+
+
+.congviec-row:nth-child(4n + 1) {
+  background: rgb(93, 12, 255);
+}
+
+.congviec-row:nth-child(4n + 2) {
+  background: rgb(255, 12, 241);
+}
+
+.congviec-row:nth-child(4n + 3) {
+  background: rgb(20, 159, 255); 
+}
+
+.icons {
+  display: flex;
+  align-items: center;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.Delete-icon {
+  margin-right: 5px;
+  color: #fff;
+}
+
+.Ddit-icon {
+  color: #fff;
+}

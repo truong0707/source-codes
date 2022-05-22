@@ -1,0 +1,98 @@
+.bgImg{
+    margin: auto;
+    position: relative;
+    height: 534px;
+    width: 1435px;
+    .backTranColor{
+        background: linear-gradient(to right, rgba(0, 0, 0), 70%, rgba(0, 0, 0, 0.2));
+        width: 100%;
+        height: 100%;
+        position:absolute;
+        z-index: 0;
+
+    }
+    img{
+        width: 100%;
+        height: 100%;
+        position:absolute;
+        z-index: 0;
+
+    }
+    .listShow{
+        position: absolute;
+        z-index: 20;
+        .show{
+            height: 600px;
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            .leftShow{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                width: 100%;
+                height: 600px;
+                margin-left: 50px;
+              
+                .iconBox{
+                    margin-top: 20px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    height: 60px;
+                    .iconAdd,
+                    .btnPlayShow{
+                        border: none;
+                        border-radius: 10px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        background-color: red;
+                        width: 150px; 
+                        height: 100%;
+                        margin: 0 10px;
+                        
+                        .iconShow{
+                            color: white;
+                            font-size: 50px;
+                            
+                        }
+    
+                    }
+                    .iconAdd{
+                        background-color: rgb(145, 143, 143);
+                        width: 100px; 
+                    }
+                }
+                .nameBox{
+                    
+                    .nameMovie{
+                        font-size: 50px;
+                        color: white;
+                    }
+                }
+               
+                .tittleBox{
+                    color: rgb(129, 122, 122);
+                    margin-top: 20px;
+
+                }
+                .actorBox{
+                    color: rgb(129, 122, 122);
+                    margin-top: 20px;
+                    margin-left: -500px;
+                }
+            }
+            .rightShow {
+                width: 100%;
+                height: 600px;
+    
+            }
+        }
+    }
+    
+   
+}

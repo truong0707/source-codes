@@ -1,0 +1,9 @@
+Giải thích Project:
++ Bên trong file package.json có chứa các thư viện.(ví dụ: khi chúng ta chạy "yarn dev" đc bởi vì trong file nó có)
++ Bên trong file .env chưa các Port , URL kết nối datbase, và 1 số thông tin khác.
+
+
+	
+Luồn chạy :
+
+index.js => app.js => router => validate => controller => service => models (vậy ta sẽ code phần models trc.)

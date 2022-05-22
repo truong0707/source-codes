@@ -1,0 +1,55 @@
+[{
+  "_id": {
+    "$oid": "5dfed89743e6fed50628907c"
+  },
+  "cust_id": "A123",
+  "products": [
+    "apple",
+    "lemon"
+  ],
+  "amount": 500,
+  "status": "completed"
+},{
+  "_id": {
+    "$oid": "5dfed8a643e6fed50628908a"
+  },
+  "cust_id": "B456",
+  "products": [
+    "lemon"
+  ],
+  "amount": 100,
+  "status": "processing"
+},{
+  "_id": {
+    "$oid": "5dfed8b043e6fed50628908f"
+  },
+  "cust_id": "B456",
+  "products": [
+    "apple",
+    "orange"
+  ],
+  "amount": 300,
+  "status": "completed"
+},{
+  "_id": {
+    "$oid": "5dfed8b943e6fed506289094"
+  },
+  "cust_id": "C789",
+  "products": [
+    "apple",
+    "lemon",
+    "orange"
+  ],
+  "amount": 800,
+  "status": "completed"
+},{
+  "_id": {
+    "$oid": "5dfed8c343e6fed506289097"
+  },
+  "cust_id": "A123",
+  "products": [
+    "apple"
+  ],
+  "amount": 250,
+  "status": "completed"
+}]

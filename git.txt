@@ -1,0 +1,30 @@
+- git init
+- git status
+- git add .
+- git commit
+- Xóa file khỏi staging Area : git rm --cached (tên file)
+- commit : git commit -m "ghi nội dung bạn thay đổi"
+-> m: viết tắt chữ message
+
+- Khi ta muốn thêm 1 nội dung vào file đã commit ta có thể làm nhanh: git commit -a -m "những thay đổi a"
+-> -a: có nghĩa là nó sẽ đưa những thứ đang đc thay đổi, và nó sẽ commit luôn.
+- kết nối remote repon với local repon: git remote add origin https://github.com/truong0707/test-git.git
+- kết nối remote branch với local branch: git push -u origin (tên nhánh)
+-> u: viết tắt của upstream
+-> ví dụ: git push -u origin master
+- xem log: git log --oneline
+- Kiểm tra nhánh: git branch
+- Tạo branch: git branch (tên nhánh)
+-> ví dụ : git branch B1
+- chuyển nhánh: git checkout (tên nhánh)
+-> git checkout B1
+- git checkout -b (tên) : có nghĩa là tạo branch ngay tại chỗ đó 
+--> ví dụ:  git checkout -b B3
+---> đang đứng cùng với B1
+
+# merge fast forward
+
+# merge no fast forward
+ví dụ : git merge B5 --no-ff 
+
+- Xóa branch: git branch - d (tên branch)

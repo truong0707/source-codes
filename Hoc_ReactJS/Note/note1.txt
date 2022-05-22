@@ -1,0 +1,4 @@
+<Col span={8}></Col>
+
++ span = {8} là 1 HTML Atribute(hay là thuộc tính HTLM hay cụ thể hơn nữa là thuộc tính phần tử HTML) được sử
+dụng để bổ sung thông tin cho phần tử 

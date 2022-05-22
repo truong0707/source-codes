@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+            img {
+                width: 200px;
+            }
+    </style>
+</head>
+<body>
+    <% danhSach.forEach(element => { %> 
+        <button>
+            <a href="/add">add new</a>
+        </button>
+       <div class="name">
+           <img class="img" src="./upload/<%= element.img %> " alt="">
+           <div class="sp"> <h1><%= element.name %></h1></div>
+           <div class="price"> <h1><%= element.price %></h1></div>
+            <button>
+                <a href="./edit/<%= element._id %>">Edit</a>
+            </button>
+            <button>
+                <a href="./delete/<%= element._id %>"">delete</a>
+            </button>
+       </div>
+    <% }); %> 
+       
+</body>
+    <script>
+            const img = document.querySelector('.img')
+            console.log(img)
+            
+    </script>
+</html>

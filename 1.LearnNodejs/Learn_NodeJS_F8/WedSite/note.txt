@@ -1,0 +1,137 @@
+1. npm init
+2. tạo 1 file index.js
+3. Vào gg seach npm express để tải press
+4. và vào terminal gõ npm install express --save
+5. Vào trang chủ express.js để đọc doc và làm việc
+6. vào getting started --> làm các bước để chạy đc "hello word"
+
+
+
+7. Cài nodemon (lắng nge sự thay đổi của các file mà khi chúng ta thay đổi) -> vào trang chủ nodemon
+   + npm install -g nodemon (để cài đặt cài trên global)
+   + npm install nodemon --save (trên trên dự án thôi)
+8. Để start đc file mà ta muốn thì vào package.jon và thêm ở phần "scripts" :
+   + "start" : "nodemon {tên}",
+    vd:  "start": "nodemon index.js" 
+--> và start project ---> và khi save file lại thì nó tự khởi động lại
+   + thêm --inspect vào "start" để hiện tool ----> "start": "nodemon --inspect index.js"  để có thể debub
+
+9. Thêm git repository
+   - Tạo ra 1 file: .gitignore  ---> sau đó vào file chúng ta có thể bỏ những file mà chúng ta ko muốn up lên git
+   -  ví dụ bỏ 2 file :  + .vscode
+                         + node_module/
+
+ 
+10. sử dụng thư viện morgan :
+  - seach npm morgan để tải (lệnh: npm install morgan --save-dev)
+  - nó giúp ta logger HTTP request ra giúp ta có thể thấy đc cái log của những request nó gửi lên node sever của mình
+
+--> sau đó vào index import nó vào: const morgan = require('morgan'); và đọc doc để sử dụng
+
+
+11. Sử dụng Template engines (handlebars) 
+- seach: express handlebars 
+- cài lệnh: npm install express-handlebars
+--> xem doc để sử dụng
+
+12. Sửa lại cấu trúc project
+  + Tạo thư mục src trong project
+  + ném file index.js vào src
+  + Vào file backage.json sửa: "main": "src/index.js",
+  + Vào file backage.json sửa: "start": "nodemon --inspect src/index.js",
+--> start lại
+
+
+
+13/ tạo folder resources trong src --> tạo 2 folder views và scss trong resources 
+
+
+14. Sử dụng thư viện npm install node-sass
+
+15. link bootstrap
+
+16. Basic routing (định nghĩa tuyến đường học sâu)
++ Vào  trang express -> getting started
+
+
+17. Query parameters (truyền dữ liệu qua chình URL của mình)
+
+18. Default behavior of HTML forms (hành vi mặc định của form trong HTML)
+
+19. Tìm hiểu mohinh MVC --> ra ra moo hình MVC
+
+
+
+20. Tải monggo db
+
+
+21. tải mongoose (nó đứng  ở  giữa khi làm việ với monggoDB)
++ npm install mongoose
+22. tạo [MVC] Model
+
+
+23
+24. vào  trang thư viện HandleBars để xem cách ngta render
+
+
+
+
+
+* những khinh nghiệm học đc:
+
+//   res.send('Hello World!') // trả về trình duyệt 1 chuỗi là hello word
+
+  // return res.send(`
+  //     <h1> Hello Truong </h1>
+  // `)
+
+
+
+// console.log(__dirname); // => log ra đúng ứng dụng mà ta đang chạy : D:\1.LearnNodejs\Learn_NodeJS_F8\WedSite\src
+// console.log(__dirname, 'resources/views'); // => nối cho nó đến resources/view : D:\1.LearnNodejs\Learn_NodeJS_F8\WedSite\src
+
+
+ {{{body}}}
+            {{!-- dù render home nhưng nó vẫn lấy cái layout main này vào , và nó vẫn chọc contents của file home và lấy
+            --}}
+        </div>
+
+
+// app.engine('handlebars', handlebars); => có lỗi
+
+
+console.log(req.query)
+
+
+Bản thân cái controller chính là cái function handleler
+
+// lắng nge port
+// 127.0.0.1 - localhost
+app.listen(port, () => {
+  console.log(`Example app listening at http://localhost:${port}`)
+})
+
+
+// // trang tin tuc
+    // app.get('/news', (req, res) => {
+    //     res.render('news');
+    // });
+
+    app.use('/news', newsRouter);
+
+
+ // res.render('home');
+        //  call back
+        Course.find({}, function(err, courses){
+            if (!err) {
+                res.json(courses);
+                return;
+            } else {
+                next(err) // lỗi
+            }
+        });
+        // Promise
+        Course.find({})
+        .then(courses => res.json(courses))
+        .catch(error => next(error));
+    }

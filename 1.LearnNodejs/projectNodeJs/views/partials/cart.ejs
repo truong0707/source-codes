@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <base href="http://localhost:3000">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/base.css">
+    <link rel="stylesheet" href="/css/main.css">
+
+</head>
+<body>
+    <div  class="app__modal app__modal--has-cart"  >  
+        <div class="modal">
+            <div class="modal__overlay">
+        
+            </div>
+            <div class="modal__body" style="width: 800px;">
+                <div class="modal__inner">
+                    
+                        <!-- authen form -->
+                        <div class="cart-form">
+                            <div class="cart-form__header ">
+                                <h3 class="cart-form__heading">Giỏ hàng</h3>
+                                <a style="text-decoration: none; color: white;" href="http://localhost:3000/home">
+                                    <h3>Home</h3>
+                                </a>
+                            </div>
+                            <div class="cart-form__container">
+                               <h3 class="cart-form__category-heading">Danh mục sản phẩm</h3>
+                               <div class="cart-form__category-checkAll">
+                                    <input type="checkbox">
+                                    <h4>Chọn tất cả</h4>
+                               </div>
+                               
+                               
+                               <ul class="header__cart-list-item cart__form-list-item">
+                                   
+                                <% carts.forEach(cart => {  %> 
+                                    <li class="header__cart-item cart__form-item">
+                                        <input class="cart__form-item-chosse" type="checkbox">
+                                        <img src="/upload/<%= cart.img %>" alt="" class="header__cart-img cart__form-item-img">
+                                        <div class="header__cart-item-info cart__form-item-info">
+                                            <div class="header__cart-item-header cart__form-item-header">
+                                                <h5 class="header__cart-item-name cart__form-item-name">
+                                                    <%- cart.name %>  
+                                                </h5>
+                                                <div class="header__cart-item-price-wrap cart__form-item-wrap">
+                                                    <span class="header__cart-item-price cart__form-item-price"><%- cart.price %> </span> <span>đ</span>
+                                                </div>
+                                                
+                                            </div>
+                                            <div class="header__cart-item-body cart__form-item-body">
+                                                <span class="header__cart-item-des">
+                                                    Phân loại: <%- cart.classify %>
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="header__cart-item-controls ">
+                                            <input class="cart__form-quantity" type="number"text" value="1" min="1" max="10">
+                                            <button class="btnn btn--activee  cart__form-item-remove">
+                                                <a style="text-decoration: none; color: #fff;" href="/deleteCart/<%- cart._id %>">Xóa</a>
+                                            </button>
+                                        </div>
+                                    </li>
+                                        
+                                    <%}) %> 
+                                </ul>
+                                <div class="cart__form-price-sum"><span class="price-sum">
+                                    Tông tiền:</span class="price"> <span>100.000.000 đ</span>
+                                    <button class="btnn btn--activee cart__form-item-buy">Thanh Toán</button>
+                                </div>
+                                
+                            </div>
+                            
+                        </div>
+                   
+                </div>
+            </div>
+        </div>
+    </div>
+    </body>
+    <script>
+        const prices = document.querySelectorAll('.cart__form-item-price')
+        const pricesArr = [...prices]
+console.log(prices)
+    
+          pricesArr.map((item) => {
+                const number = +item.innerText
+                console.log(number)
+                return item.innerText = number.toLocaleString()
+            })
+    </script>
+</html>
+

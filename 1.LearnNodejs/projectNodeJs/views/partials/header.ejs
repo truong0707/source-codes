@@ -1,0 +1,246 @@
+<header class="header">
+    <div class="grid">
+        <!-- header Navbar -->
+        <nav class="navbar">
+           <ul class="navbar__list">
+                <li class="navbar__item navbar__item--has-qr navbar__item--separate">
+                    Vào cửa hàng trên ứng dụng mobile
+                    <div class="header__qr">
+                        <img class="header__qr-img" src="/img/QR.png" alt="">
+                        <div class="header__qr-apps">
+                            <a href="" class="header__qr-link">
+                                <img src="/img/appstore.png" alt="" class="header__qr-down-img">
+                            </a>
+                            <a href="" class="header__qr-link">
+                                <img src="/img/ggplay.png" alt="" class="header__qr-down-img">
+                            </a>
+                        </div>
+                    </div>
+                </li>
+                <li class="navbar__item">
+                    <span class="navbar__item-no-pointer">
+                        Kết nối
+                    </span>
+                    <a href="" class="navbar__icon-link">
+                        <i class="navbar__icon fab fa-facebook"></i>
+                    </a>
+                    <a href="" class="navbar__icon-link">
+                        <i class="navbar__icon fab fa-instagram"></i>
+                    </a>
+                </li>
+                
+           </ul>
+
+           <ul class="navbar__list">
+                <div href="" class="navbar__item-link mr-r8 navbar__item-link--has-add">
+                    <i class="home-product-item__btn-icon fas fa-plus"></i>
+                    Thêm sản phẩm
+                </div>
+                <li class="navbar__item navbar__item--has-notify">
+                    <a href="" class="navbar__item-link">
+                        <i class="navbar__icon fas fa-bell"></i>
+                        Thông báo
+                        <span class="navbar__item-notice"><%- carts.length %></span>
+                    </a>
+
+                    <div class="header__notify">
+                        <header class="header__notify-header">
+                            <h3>Thông báo mới nhận</h3>
+                            
+                        </header>
+
+                        <ul class="header__notify-list">
+                            <% carts.forEach((cart) => { %>
+                                <li class="header__notify-item">
+                                    <a href="" class="header__notify-link header__notify-item--viewed">
+                                        <img src="/upload/<%= cart.img %>" alt="" class="header__notify-img">
+                                        <div class="header__notify-info">
+                                            <span class="header__notify-name"><%= cart.name %> được thêm thành công vào giỏ</span>
+                                            <span style="margin-right: auto;" class="header__notify-des"><%= cart.classify %></span>
+                                        </div>
+                                    </a>
+                                </li>
+                            <% }) %>
+                            
+                        </ul>
+                        <footer class="header__notify-footer">
+                            <a href="" class="header__notify-footer-btn">Xem tất cả</a>
+                        </footer>
+                    </div>
+                </li>
+                
+                <li class="navbar__item">
+                    <a href="" class="navbar__item-link">
+                        <i class="navbar__icon fas fa-question"></i>
+                        Trợ giúp
+                    </a>
+                </li>
+                <!-- <li class="navbar__item bold navbar__item--separate">Đăng ký</li>
+                <li class="navbar__item bold">Đăng nhập</li> -->
+                <li class="navbar__item navbar__item-user">
+                    <img src="/img/tien.jpg" alt="" class="navbar__item-user-avatar">
+                    <span class="navbar__item-user-name">tien48026@donga.edu.vn</span>
+
+                    <ul class="header__navbar-user-menu">
+                        <li class="header__navbar-user-menu-item">
+                            <a href="">Tài khoản của tôi</a>
+                        </li>
+                        <li class="header__navbar-user-menu-item">
+                            <a href="">Địa chỉ của tôi</a>
+                        </li>
+                        <li class="header__navbar-user-menu-item">
+                            <a href="">Đơn mua</a>
+                        </li>
+                        <li class="header__navbar-user-menu-item header__navbar-user-menu-item--separate">
+                            <a href="http://localhost:3000">Đăng xuất</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+
+        <div class="header__with-search">
+            <div class="header__logo">
+                <a href="/" class="header__logo-link">
+                    <img class="header__logo-img" src="https://img.lovepik.com/element/40020/6683.png_860.png" alt="">
+                </a>
+            </div>
+            <div class="header__search">
+                <!-- header Input -->
+                <div class="header__search-input-wrap">
+                    <input placeholder="Search" type="text" class="header__search-input">
+                    <!-- Search history -->
+                    <div class="header__search-history">
+                        <h3 class="header__search-history-heading">
+                            Lịch sử tìm kiếm
+                        </h3>
+                        <div class="header__search-history-list">
+                            <li class="header__search-history-item">
+                                <a href="">Leesin inset bida</a>
+                            </li>
+                            <li class="header__search-history-item">
+                                <a href="">Leesin inset bida</a>
+                            </li>
+                            
+                        </div>
+                    </div>
+                </div>
+                <!-- header Select -->
+                <div class="header__search-select">
+                    <span class="search-select__label">Trong Shop</span>
+                    <i class="search-select__icon fas fa-angle-down"></i>
+                    <ul class="header__search-option">
+                        <li class="header__search-option-item header__search-option-item--active">
+                            <span>Trong Shop</span>
+                            <i class=" fas fa-check"></i>
+                        </li>
+                        
+                        <li class="header__search-option-item">
+                            <span>Ngoài Shop</span>
+                            <i class=" fas fa-check"></i>
+                        </li>
+                    </ul>
+                </div>
+                <!-- header Search-btn -->
+                <button class="header__search-btn">
+                    <i class="header__cart-btn-icon fas fa-search"></i>
+                </button>
+            </div>
+            <!-- header Cart -->
+            <div class="header__cart">
+                <div class="header__cart-wrap">
+                 
+                      <a href="/cart">
+                        <div class="header__cart-icon-wrap">
+                            <i class="header__cart-icon fas fa-shopping-cart"></i>
+                             
+                            <span class="header__cart-notice"><%- carts.length %></span>
+                        </div>
+                 
+                      </a>
+                    
+                    <!-- No Cart: header__cart-list--no-cart -->
+                    <div class="header__cart-list">
+                        <img src="/img/no-cart.png" alt="" class="cart-list__no-cart-img">
+                        <span class="cart-list__no-cart-msg">Chưa có sản phẩm</span>
+                        <h4 class="cart-list__no-cart-heading">Sản phẩm đã thêm</h4>
+                                <!-- Cart Item -->
+                        <ul class="header__cart-list-item">
+                            <li class="header__cart-item header__cart-item--has-cart">
+                                <img src="/img/laco.png" alt="" class="header__cart-img">
+                                <div class="header__cart-item-info">
+                                    <div class="header__cart-item-header">
+                                        <h5 class="header__cart-item-name">
+                                           Game liên minh siu yasuo 
+                                        </h5>
+                                        <div class="header__cart-item-price-wrap">
+                                            <span class="header__cart-item-price">2.000.000đ</span>
+                                            <span class="header__cart-item-multiply">x</span>
+                                            <span class="header__cart-item-qnt">2</span>
+                                        </div>
+                                        
+                                    </div>
+                                    <div class="header__cart-item-body">
+                                        <span class="header__cart-item-des">
+                                            Phân loại: Bạc
+                                        </span>
+                                        <span class="header__cart-item-remove">Xóa</span>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="header__cart-item header__cart-item--has-cart">
+                                <img src="/img/laco.png" alt="" class="header__cart-img">
+                                <div class="header__cart-item-info">
+                                    <div class="header__cart-item-header">
+                                        <h5 class="header__cart-item-name">
+                                            Game liên minh siu yasuo
+                                        </h5>
+                                        <div class="header__cart-item-price-wrap">
+                                            <span class="header__cart-item-price">2.000.000đ</span>
+                                            <span class="header__cart-item-multiply">x</span>
+                                            <span class="header__cart-item-qnt">2</span>
+                                        </div>
+                                        
+                                    </div>
+                                    <div class="header__cart-item-body">
+                                        <span class="header__cart-item-des">
+                                            Phân loại: Bạc
+                                        </span>
+                                        <span class="header__cart-item-remove">Xóa</span>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="header__cart-item header__cart-item--has-cart">
+                                <img src="/img/laco.png" alt="" class="header__cart-img">
+                                <div class="header__cart-item-info">
+                                    <div class="header__cart-item-header">
+                                        <h5 class="header__cart-item-name">
+                                            Game liên minh siu yasuo
+                                        </h5>
+                                        <div class="header__cart-item-price-wrap">
+                                            <span class="header__cart-item-price">2.000.000đ</span>
+                                            <span class="header__cart-item-multiply">x</span>
+                                            <span class="header__cart-item-qnt">2</span>
+                                        </div>
+                                        
+                                    </div>
+                                    <div class="header__cart-item-body">
+                                        <span class="header__cart-item-des">
+                                            Phân loại: Bạc
+                                        </span>
+                                        <span class="header__cart-item-remove">Xóa</span>
+                                    </div>
+                                </div>
+                            </li>
+                            
+                        </ul>
+                        <button class="btn btn--active header__cart-viewCart">Xem giỏ hàng</button>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</header>

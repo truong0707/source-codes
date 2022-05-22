@@ -1,0 +1,39 @@
+Chạy file Node JS trên Server
+Chạy file : node Tên.js
+
+Tạo project:
+B1: Tạo file backage.json :  npm init
+B2: Cài đặt các modun Express :  npm install express
+
+Vào cổng để xem kết quả: http://127.0.0.1:sốcổng
+                         http://localhost:8080/
+
+
+
+Kết nối Mongodn :
+
+B1: Cài đặt postman vào link: https://www.postman.com/downloads/
+B2: Cài đặt git  vào link:  https://git-scm.com/downloads
+B3: Vào tải code trang để kết nối : https://github.com/hagopj13/node-express-boilerplate
+B4: Vào cmd nhập lệnh : 1:       git clone --depth 1 https://github.com/hagopj13/node-express-boilerplate.git
+                        2:       cd node-express-boilerplate 
+                        3:       npx rimraf ./.git  
+
+B5: tải yarn bằng lệnh : npm install -g yarn
+                         yarn install
+
+B6: Kết nối với mongo trên server
+B7: run locally bằng câu lênh: yarn dev (nếu đang trong visual code thì thì bấm Ctrl + shift + C nó sẽ mở cmd đang đứng )
+B8: khi chạy thành công thì nó sẽ hiện ra lệnh thành công thì vào: http://localhost:3000/v1/users để kiểm tra 
+
+B9: Dùng postman: -vào My WorkSpaces bấm vào dấu "+" rồi thả đường link lúc nãy: http://localhost:3000/v1/users vào ô URL
+                   (có nhiều phương thức như GET, POST, PUS.. có thể chọn phương thức cần dùng) 
+                  + GET: Là cho việc lấy dữ liệu
+                  + POST: Là cho việc insert dữ liệu 
+                  + PUT và PATCH: là cho việc update dữ liệu 
+                  + DElETE: là cho việc xóa đữ liệu 
+                  - Chọn phương thức sau đó bấm send thể thực thi 
+
+                  * Khi dùng POST sẽ chọn dữ liệu là json: Vào Body -> raw -> Text -> chọn kiểu (chọn JSON)             
+
+        

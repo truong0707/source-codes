@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <base href="http://localhost:3000">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop tien</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/base.css">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/font/fontIcon/css/all.min.css">
+    <!-- thuvien -->
+    
+</head>
+<body>
+    <div class="app">   
+        <%-include("../partials/header.ejs") %> 
+        <%-include("../partials/container.ejs") %> 
+    </div>
+    <%-include("../partials/modal") %>
+    <!-- , { carts: carts} -->
+
+</body>
+    <script>
+        (function() {
+            const $ = document.querySelector.bind(document);
+            const $$ = document.querySelectorAll.bind(document);
+            const btnAdd = $('.navbar__item-link--has-add');
+            const btnCloseAdd = $('.add-form__header-icon');
+            const close = $('.cart-form__header-icon');
+            const modalAdd = $('.modal-add')
+            let price = $('.home-product-item__price-curr')
+            let prices = $$('.home-product-item__price-curr')
+            let modal = $(".app__modal");
+            let modalAppEdit = $(".modal__appEdit");
+            const modalEdit = $('.form-Edit');
+            function viewModal() {
+                if (modal.style.display === "none") {
+                    modal.style.display = "block";
+                } else {
+                    modal.style.display = "none";
+                }
+            }
+            function closeModal() {
+                if (modal.style.display === "block") {
+                    modal.style.display = "none";
+                }
+            }
+            btnAdd.onclick = () => {
+                viewModal()
+            }
+            btnCloseAdd.onclick = () => {
+                closeModal()
+            }
+            // function viewModalEdit() {
+            //     if (modalAppEdit.style.display === "none") {
+            //         modalAppEdit.style.display = "block";
+            //     } else {
+            //         modalAppEdit.style.display = "none";
+            //     }
+            // }
+            // function closeModalEdit() {
+            //     if (modalAppEdit.style.display === "block") {
+            //         modalAppEdit.style.display = "none";
+            //     }
+            // }
+            // modalEdit.onclick = () => {
+            //     viewModalEdit()
+            // }
+           
+            const pricesArr = [...prices]
+           const priceNumber =  pricesArr.map((item) => {
+                const number = +item.innerText
+                return item.innerText = number.toLocaleString()
+            })
+
+          
+           
+        })()
+     
+        
+    </script>
+</html>

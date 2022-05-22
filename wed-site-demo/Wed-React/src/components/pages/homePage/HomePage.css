@@ -1,0 +1,54 @@
+.AllHomePage{
+   background: #F2F3F5;
+}
+.bodyHomePage{
+   background: #F2F3F5;
+   margin-top: 40px;
+}
+.boxNewsHome {
+   background:  white;
+   border-radius: 10px;
+   width: 80%;
+
+}
+.headingBoxNews{
+   height: 90px;
+   background:  white;
+}
+.ss{
+   height: 500px;
+   background-image: url("https://4.bp.blogspot.com/-_CBrPzlJPAs/VXGmSlT9c_I/AAAAAAAAGvw/TJCdpzhZVXM/s1600/hinh-anh-nen-hd-sieu-ro-net-cuc-dep-cho-may-tinh-img044.jpg");
+   background-size: 100%;
+   background-repeat: none;  /* lặp lại ảnh */
+}
+
+
+/* // */
+.left{
+	width: 100%;
+	height: 900px;
+	/* background-color: palevioletred; */
+	overflow-y: scroll;
+}
+.left ul{
+	list-style: none;
+	padding-left: 0px;
+}
+::-webkit-scrollbar {
+	width: 12px;
+	background-color: #F2F3F5;
+}
+
+::-webkit-scrollbar-thumb{
+	background-color: rgb(194, 190, 190);
+   width: 20px;
+	border-radius: 5px;
+
+}
+.left ul li{
+	border-bottom: 1px solid white;
+	color: white;
+	height: 100px;
+	line-height: 40px;
+	padding-left: 40px;
+}

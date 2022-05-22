@@ -1,0 +1,62 @@
+
+    <div class="row">
+        <div class="col-xl-3">
+            <%- include ('../menu') %> 
+        </div>
+        <div class="col-xl-9">
+            <div class="card">
+                <div class="card-header">
+                    <div class="row">
+                        <div class="col-8">
+                            <h4 class="font-weight-bold">Tất Cả Sách Giáo Dục</h4>
+                        </div>
+                        <div class="col-4">
+                            <a href="/educations/addEducation" class="btn btn-success float-right"><i class="fa fa-plus mr-1"></i>Thêm Sách</a>
+                        </div>
+                    </div>
+                </div>
+                  <div class="card-body">
+                    <table class="table table-hover">
+                        <thead class="table-dark">
+                            <tr>
+                                <th scope="col">Ảnh</th>
+                                <th scope="col">Tên Sách</th>
+                                <th scope="col">Tác Giả</th>
+                                <th scope="col">Giá Mới</th>
+                                <th scope="col">Giá Cũ</th>
+                                <th scope="col">Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <% if(educations.length > 0) { %>
+                                <% for(let education of educations) { %>
+                                <tr>
+                                    <th scope="row"><img src="<%= education.image %>" alt="<%= education.name %>" style="height: 5rem;"></th>
+                                    <td><%= education.name %></td>
+                                    <td><%= education.author %></td>
+                                    <td><%= education.newPrice %></td>
+                                    <td><%= education.oldPrice %></td>
+                                    <td>
+                                        <a href="/educations/updateEducation/<%= education._id %>" class="btn btn-sm btn-warning"><i class="fa fa-edit"></i></a>
+                                        <a href="/educations/deleteEducation/<%= education._id %>" class="btn btn-sm btn-danger"><i class="fa fa-trash"></i></a>
+                                    </td>
+                                </tr>
+                                <% } %>
+                            <% } else { %>
+                                <tr>
+                                    <td>No data found</td>
+                                </tr>
+                            <% } %>
+                        </tbody>
+                        </table>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+

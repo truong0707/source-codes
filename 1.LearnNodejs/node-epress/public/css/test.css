@@ -1,0 +1,113 @@
+.nen11 {
+    width           : 100%;
+    height          : 640px;
+    background-color: whitesmoke;
+}
+
+.Box-qv {
+    width : 1200px;
+    height: 500px;
+    margin: 0 auto;
+
+}
+
+.ad1-qv {
+    width        : 395px;
+    height       : 274px;
+    float        : right;
+    border-radius: 7px;
+}
+
+/**/
+.CI1 {
+    width : 797px;
+    height: 274px;
+
+    border-radius: 7px;
+}
+
+.CS1 {
+    width : 797px;
+    height: 274px;
+    float : left;
+
+}
+
+/* Make the image fully responsive */
+
+.CI1 img {
+    width : 100%;
+    height: 100%;
+}
+
+
+
+.carousel-control-next {
+    right: 0;
+}
+
+
+
+/**/
+.safeqv {
+    width: 100%;
+    float: left;
+
+    padding-top: 16px;
+}
+
+.safeqv-bar {
+    width           : 100%;
+    height          : 65px;
+    float           : left;
+    background-color: white;
+    border-bottom   : 1px solid rgb(244, 244, 244);
+}
+
+.safe-child {
+    width           : 100%;
+    height          : 267px;
+    float           : left;
+    background-color: white;
+}
+
+.safeqv-header {
+    width : 1208px;
+    height: 28px;
+    float : left;
+    margin: 16px 16px;
+}
+
+/**/
+.slide2-ad2 {
+    width: 1200px;
+}
+
+.slide-con {
+    transition      : box-shadow .3s;
+    width           : 196px;
+    height          : 267px;
+    float           : left;
+    background-color: tomato;
+    margin          : 0 2px;
+}
+
+.slide-con:hover {
+    box-shadow: 0 0 11px rgba(33, 33, 33, .2);
+}
+
+/*
+.carousel-inner2{
+    width: 1200px;
+    height: 267px;
+
+    border-radius: 7px;
+}*/
+
+
+/* footer*/
+.footer-test {
+    width           : 100%;
+    height          : 500px;
+    background-color: white;
+}

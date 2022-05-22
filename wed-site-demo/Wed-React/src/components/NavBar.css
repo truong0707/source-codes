@@ -1,0 +1,46 @@
+.navbar-background {
+    background-color: white;
+    box-shadow: 1px 2px 4px rgba(133, 129, 129, 0.5);
+    font-family: "Scheherazade New", serif;
+    height: 90px;
+    /* position: fixed; */
+    }
+    .nav-color-food {
+    color: #82ae46;
+    cursor: pointer;
+    text-shadow: 1.5px 1.5px orangered;
+    font-size: 1.8rem;
+    text-decoration: none;
+    transition: 0.5s;
+    }
+    /* .nav-color-food:hover {
+    color: red;
+    } */
+    .navbar-header-hover {
+    cursor: pointer;
+    }
+    #navbarSupportedContent ul li a:hover {
+    color: #121097;
+    }
+    .nav-link {
+    color: #121097;
+    margin-left: 10px;
+    margin-top: 20px;
+    float: right;
+    }
+    .logo{
+        height: 80px;
+        font-family: "Scheherazade New", serif;
+    }
+    .input-nav{
+        text-align: center;
+        margin-top: 15px;
+        border-radius: 50px;
+        height: 47px;
+        width: 350px;
+        font-size: 23px;
+    }
+.boxIconMenu-nav{
+    width: 160px;
+    text-align: center;
+}

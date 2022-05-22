@@ -1,0 +1,122 @@
+.blur {
+    position: relative;
+    width: 100%;
+    height: 600px;
+    display: block;
+}
+.row-news {
+    position: absolute;
+    width: 100%;
+    height: 51%;
+    top: 10%;
+    display: block;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+.row-news .column1{
+    width: 30%;
+    height: 100%;
+    background-color: rgba(17,17,17,0.75);
+    margin-left: 5px;
+    float: left;
+    padding: 1.5%;
+    
+}
+.row-news .column2{
+    width: 30%;
+    height: 100%;
+    background-color: rgba(17,17,17,0.75);
+    margin-left: 2%;
+    float: left;
+    padding: 1.5%;
+}
+.row-news .column3{
+    width: 30%;
+    height: 100%;
+    background-color: rgba(17,17,17,0.75);
+    margin-left: 2%;
+    float: left;
+    padding: 1.5%;
+}
+.column1 .box1,
+.column2 .box2,
+.column3 .box3{
+    width: 100%;
+    height: 50%;
+    background-color: coral;
+    display: inline-block;
+    overflow: hidden;
+}
+
+.column1 .box1-1,
+.column2 .box2-2,
+.column3 .box3-3{
+    font-size: 16px;
+    font-weight: normal;
+    font-stretch: normal;
+    line-height: 29px;
+    color: #fefefe;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-box-orient: vertical;
+    white-space: normal;
+}
+.img1 {
+    width: 100%;
+    height: 100%;
+    transition: all 0.5s ease;
+}
+.img1:hover{
+    transform: scale(1.5);
+}
+.img2 {
+    width: 100%;
+    height: 100%;
+    transition: all 0.5s ease;
+}
+.img2:hover{
+    transform: scale(1.5);
+}
+.img3 {
+    width: 100%;
+    height: 100%;
+    transition: all 0.5s ease;
+}
+.img3:hover{
+    transform: scale(1.5);
+}
+.column1 .box1-1{
+    width: 100%;
+    height: 50%;
+    /* background-color: cornflowerblue; */
+    padding-top: 2%;
+}
+.column2 .box2-2{
+    width: 100%;
+    height: 50%;
+    /* background-color: cornflowerblue; */
+    padding-top: 2%;
+}
+.column3 .box3-3{
+    width: 100%;
+    height: 50%;
+    /* background-color: cornflowerblue; */
+    padding-top: 2%;
+}
+.texth3{
+    color: white;
+}
+.textp{
+    font-weight: bold;
+    color: white;
+}
+.date{
+    float: left;
+    color: rgb(179, 170, 170);
+}
+.info{
+    float: right;
+    color: yellow;
+}

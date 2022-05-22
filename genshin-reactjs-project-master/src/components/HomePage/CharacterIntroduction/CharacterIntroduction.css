@@ -1,0 +1,97 @@
+.city{
+    position: relative;
+}
+
+.city_list-item{
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+.sonn{
+    width: 100%;
+    overflow: hidden;
+    background: rgba(0, 0, 0, 0.9);
+}
+
+
+.test {
+    position: absolute;
+}
+
+.jean{
+    position: absolute;
+    right: 0;
+    display: none;
+}
+.city_list-item:hover .jean {
+    display: block;
+    
+}
+
+.nenn{
+    position: absolute;
+    bottom: -60px;
+    align-items: center;
+}
+
+.ngangg{
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    display: none;
+}
+
+.city_list-item:hover .ngangg {
+    display: block;
+}
+
+.fixhiden {
+    overflow: hidden;
+}
+
+
+.test p{
+    font-size: 40px;
+    color: white;
+}
+
+.city_list-item:hover{    
+    border: 5px solid #fff; 
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.city_list-item:hover .sonn{    
+
+    overflow: hidden;
+    animation: zoom-in-zoom-out 2s ease-out   
+}
+
+@keyframes zoom-in-zoom-out {
+    0% {
+      transform: scale(1, 1);
+    }
+    50% {
+      transform: scale(1.1, 1.1);
+    }
+  }
+
+.city_list-item--disable{
+    
+    width: 100%;    
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    box-sizing: border-box;    
+}
+
+.city_list-item--disable .fonttt{
+    color: #999;
+}

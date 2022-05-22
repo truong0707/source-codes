@@ -1,0 +1,204 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+.all-page {
+    width: 77%;
+}
+.body-page {
+    display: flex;
+}
+.wrap__div {
+    width: 699px;
+    display: inline-block;
+    display: flex;
+    margin-left: 20px;
+}
+.content-left {
+    padding: 10px 10px 10px 10px;
+}
+.child {
+    width: 347px;
+    margin-right: 10px;
+    margin-top: 15px;
+}
+.title {
+    font-size: 16px;
+}
+.image {
+    width: 35%;
+    height: 35%;
+    margin-right: 9px;
+}
+.child .content_a {
+    display: flex;
+    margin-top: 10px;
+    min-height: 100px;
+}
+.item1 {
+    background: rgb(200, 240, 141);
+}
+.item2 {
+    background: rgb(157, 231, 46);
+}
+.content_b {
+    margin-top: 10px;
+}
+
+.imgage-main {
+    margin-top: 10px;
+    margin-left: 8px;
+}
+
+/*  */
+.box_ul_top {
+    display: flex;
+    list-style: none;
+}
+.box_ul_top li {
+    font-size: 12px;
+    height: 16px;
+    background: #dedede;
+    margin-right: 2px;
+    border-radius: 3px;
+    text-align: center;
+    padding: 2px 2px 2px 2px;
+}
+.box_ul_top .item {
+    background: #91da48;
+    color: #fff;
+}
+
+/* right */
+.content-right {
+    width: 300px;
+    height: 100%;
+}
+.box-new {
+    margin-top: 20px;
+}
+.box-new .title {
+    color: #8dda41;
+}
+.line {
+    height: 3px;
+    width: 100%;
+    background: #8dda41;
+    margin-top: 4px;
+}
+.line2 {
+    background: #d2577e;
+    height: 3px;
+    width: 100%;
+}
+
+/*  */
+.content-new {
+    margin-top: 10px;
+    display: flex;
+}
+.content-new div {
+    margin-left: 10px;
+}
+/* thong tin chung khoang */
+.wrapper__content__ifo_CK {
+}
+.box-ifo .table_ifo {
+    display: flex;
+    background: #fafafa;
+    height: 20px;
+    padding: 5px 5px;
+}
+.table_ifo p {
+    flex: 1;
+    font-size: 15px;
+}
+.panigate {
+    display: flex;
+    justify-content: center;
+}
+.panigate li {
+    list-style: none;
+    width: 30px;
+    height: 20px;
+    /* background: #E7E7E7; */
+    text-align: center;
+    padding-top: 5px;
+    border: 1px #e7e7e7 solid;
+    margin-left: 3px;
+}
+/*  */
+.content__video {
+    display: flex;
+    /* width: 80%; */
+}
+.content__video .main-video {
+    width: 400px;
+    margin-top: 10px;
+    /* flex: 3; */
+}
+.content__video .more-video {
+    width: 300px;
+}
+.more-video p {
+    margin-left: 10px;
+}
+.wrapper__ifoPrice {
+    display: flex;
+    margin-top: 10px;
+}
+.wrapper__ifoPrice .ifoTable {
+    display: flex;
+    background: red;
+    margin-top: 10px;
+}
+.contentTable {
+    margin-right: 5px;
+}
+.contentTable div {
+    display: flex;
+}
+.contentTable div .title {
+    width: 44px;
+    background: #8dda41;
+    text-align: center;
+}
+.contentTable div p {
+    width: 96px;
+    height: 25px;
+    background: red;
+    text-align: center;
+}
+
+/* footer */
+.footer-page {
+    margin-top: 10px;
+    padding: 10px 10px 10px 10px;
+}
+.carosel__footer {
+
+}
+.carosel-footer p {
+    width: 100px;
+    
+}
+.carosel-footer .item {
+    display: flex;
+    list-style: none;
+}
+.carosel-footer .item li {
+    width: 245px;
+    height: 110px;
+    /* background: red; */
+    /* margin-left: 20px; */
+}
+.carosel-footer div {
+    padding: 10px 20px 0px 20px;
+    background: #FFF1D9;
+}
+.carosel-footer {
+    position: relative;
+}
+.carosel-footer .arrow {
+    position: absolute;
+}

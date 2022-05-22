@@ -1,0 +1,138 @@
+.character-name {
+    border-top: 3px solid #dbb17d;
+    position: absolute;
+    top: 12%;
+    left: 20%;
+}
+
+.character-name img {
+    width: 50vh;
+    height: auto;
+    margin-top: 20px;
+}
+
+
+.character-cv {
+    background-color: #cca574;
+    position: absolute;
+    top: 30%;
+    left: 20%;
+    display: flex;
+    width: 370px;
+    height: 54px;
+    font-size: 22px;
+    color: #24333c;
+    line-height: 54px;
+    padding-left: 60px;
+    box-sizing: border-box;
+    background-position: left top;
+    background-size: 54px;
+    margin-top: -10px;
+    box-shadow: 2px 3px 6px 0 rgb(12 12 12 / 20%);
+}
+
+.character-btn {
+    margin-left: -62px;
+}
+
+.character-voice img {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    width: 64px;
+    height: 64px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 64px;
+    cursor: pointer;
+}
+
+.character-voice:hover {
+    opacity: 0.8;
+}
+
+.character-switch { 
+    position: absolute;
+    z-index: 10;
+    top: 30%;
+    left: 42%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 4%;
+    padding: 2px 4px 2px 0;
+    box-sizing: border-box;
+    background: rgba(18,18,18,0.6);
+    border-radius: 16px;
+    cursor: pointer;
+}
+
+.character .active {
+    padding-right: 45px;
+    opacity: 0.8;
+    transition: 0.5s;
+}
+
+.character-subscribe { 
+    background: none;
+    font-size: 20px;
+}
+
+.character-subscribe-btn { 
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    background: #dbb17d;
+    color: #dbb17d;
+    font-size: 0;
+    text-align: center;
+    line-height: 26px;
+}
+
+/*Begin: Character Info*/
+.character-info {
+    position: absolute;
+    z-index: 11;
+    top: 38%;
+    left: 20%;
+    display: flex;
+    width: 520px;
+    max-height: 200px;
+    overflow-y: auto;
+    padding: 10px 0 10px 15px;
+    box-sizing: border-box;
+    background: rgba(1,1,1,0.5);
+    font-size: 16px;
+    color: #fff;
+    margin-top: 10px;
+    line-height: 26px;
+}
+
+.char-btn {
+    width: 20px;
+    height: 20px;
+}
+
+.char-btn img {
+    /* flex-shrink: 0; */
+    width: 20px;
+    height: 20px;
+    background-size: 20px;
+    margin-right: 24px;
+    margin-top: 4px;
+}
+
+.character-content {
+    margin-left: 10px;
+    max-height: 180px;
+    width: 455px;
+    text-align: left;
+}
+
+img.character-text {
+    position: absolute;
+    top: 62%;
+    left: 28%;
+    width: 450px;
+    height: 190px;
+}

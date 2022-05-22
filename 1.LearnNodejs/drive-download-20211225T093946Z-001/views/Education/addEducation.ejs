@@ -1,0 +1,52 @@
+<div class="card">
+    <div class="card-header">
+        <h4 class="font-weight-bold">Thêm Sách Mới</h4>
+    </div>
+    <div class="card-body">
+        <form action="/educations/addEducation" method="post">
+            <div class="row">
+                <div class="col-6">
+                    <div class="form-group">
+                        <label class="col-form-label">Link Ảnh</label>
+                        <input type="text" class="form-control" name="image" placeholder="Nhập link ảnh vào đây..." id="image">
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="form-group">
+                        <label class="col-form-label">Tên Sách</label>
+                        <input type="text" class="form-control" name="name" placeholder="Nhập Tên Sách..." id="name">
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="form-group">
+                        <label class="col-form-label">Tác Giả</label>
+                        <input type="text" class="form-control" name="author" placeholder="Nhập tác giả..." id="author">
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="form-group">
+                        <label class="col-form-label">Giá Sách Mới</label>
+                        <input type="number" class="form-control" placeholder="Nhập giá sách mới..." name="newPrice" id="newPrice">
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="form-group">
+                        <label class="col-form-label">Giá Sách Cũ</label>
+                        <input type="number" class="form-control" name="oldPrice" placeholder="Nhập giá sách cũ..." id="oldPrice">
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="form-group">
+                        <label class="col-form-label">Nội dung</label>
+                      <input class="form-control" name="content" placeholder="Nhập nội dung ở đây.." id="content"></input> 
+                      </div>
+                </div>
+                </div>
+            </div>
+            <div class="" style="margin-top: 2rem;">
+                <button type="submit" class="btn btn-success">Submit</button>
+                <a href="/educations" class="btn btn-light">Cancel</a>
+            </div>
+        </form>
+    </div>
+</div>

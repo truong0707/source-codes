@@ -1,0 +1,6 @@
+1. Tạo thư mục
+2. express -e todolist
+3. cd todolist
+   npm install
+
+4. Tạo router cho todolist: file todolist.routes.js

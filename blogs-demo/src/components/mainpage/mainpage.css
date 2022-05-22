@@ -1,0 +1,247 @@
+.Title{
+    width: 100%;
+    height: 40px;
+    background-color: rgb(85, 255, 127);
+    position: relative;
+    text-align: center;
+}
+.TopBar .AvatarMainUser{
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    float: left;
+}
+.Taskbar{
+    border: ridge red ;
+    width: 100%;
+    height: 70px;
+    background-color: aquamarine;
+    position: relative;
+}
+.TopBar{
+    width: 100%;
+    height: 110px;
+    background-color: aquamarine;
+    position: relative;
+}
+.LogOut{
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin: 8px 8px 0 0;
+    width: 100px;
+    height: 50px;
+    font-size: 16px;
+    font-weight: 700;
+    background: rgb(235, 172, 12);
+}
+.MainName{
+    text-align: center;
+    margin-top: 10px;
+}
+.NavigationBar{
+    width: 5%;
+    height: 500px;
+    float: left;
+}
+.ChatBox{
+    width: 95%;
+    height: 500px;
+    background-color: lightblue;
+    float: left;
+    position: relative;
+}
+.img{
+    opacity: 0.5;
+}
+.ChatUser{
+    width: 100%;
+    height: 50px;
+    margin-bottom: 10px;
+}
+.AvatarUser{
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    float: left;
+}
+.NameUser{
+    text-decoration: none;
+    margin-top: 10px;
+}
+.AvatarPartner{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    float: left;
+}
+.NamePartner{
+    text-align: center;
+    text-decoration: bold;
+}
+.TopBarPartner{
+    border-radius: 25px;
+    width: 100%;
+    height: 50px;
+    position: relative;
+    background-color: rgb(80, 224, 80);
+}
+.info{
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+/* navigation bar */
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 200px;
+    background-color: #f1f1f1;
+}
+li{
+    height: 100px;
+}
+li a {
+    display: block;
+    color: #000;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+.IconNavi{
+    font-size: 30px;
+}
+
+li a.navi {
+    background-color: #04AA6D;
+    color: white;
+}
+
+li a:hover:not(.navi) {
+    background-color: #555;
+    color: white;
+}
+.ChatBox .InputChat{
+    position: absolute;
+    bottom: 0;
+    margin: 0 auto;
+}
+/* input */
+.InputChat{
+    width: 100%;
+}
+.TypeMess{
+    width: 50%;
+}
+.Chat{
+    width: 67%;
+    float: right;
+}
+.Send{
+    width: 5%;
+    float: right;
+}
+
+.UserNav{
+    padding: 10px;
+    width: 28%;
+    height: 500px;
+    background: rgb(185, 181, 181);
+}
+.AvatarUser{
+    height: 40px;
+    width: 40px;
+    border-radius: 100%;
+
+}
+.MessList{
+    background-color: lightblue;
+    position :absolute;
+    right: 0;
+    top: 0;
+    width: 72%;
+    height: 75%;
+    margin-top: 7%;
+    float: right;
+}
+.Mess{
+    color: rgb(116, 235, 130);
+    font-weight: 200;
+    background-color: green;
+    padding: 5px;
+    border-radius: 20px;
+    height: auto;
+    text-align: center;
+    margin: 2px;
+    font-family: Arial, Helvetica, sans-serif
+    
+}
+.List{
+    background-color: lightblue;
+    float: right;
+    margin-right: 50px;
+}
+.MessBody{
+    background-color: lightblue;
+    position :absolute;
+    right: 0;
+    top: 0;
+    width: 72%;
+    height: 75%;
+    margin-top: 7%;
+    float: right;
+}
+h4 .NamePartner{
+    margin-top: 10px;
+}
+.infomations{
+    border: none;
+    font-weight: 700;
+    height: 30px;
+    width: 100px;
+    border-radius: 10px;
+    display: block;
+    float: left;
+    margin-top: 0px;
+    background:rgb(80, 224, 80)
+}
+
+.chinh button{
+    width: 110px;
+    height: 40px;
+    background: green;
+    font-weight: 700;
+    border-radius: 10px;
+}
+.Footer {
+    background-color: #222;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    width: 100%;
+    height: 150px;
+    margin-top: 20px;
+}
+.Name {
+    font-size: 20px;
+    padding: 20px 30px 15px;
+    color: white;
+}
+
+a {
+    color: white;
+}
+
+.IconContainer {
+    width: 60%;
+    height: 50px;
+    padding: 20px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+

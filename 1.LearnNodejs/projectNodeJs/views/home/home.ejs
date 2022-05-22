@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <base href="http://localhost:3000/home">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop tien</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/base.css">
+    <link rel="stylesheet" href="/css/mainUser.css">
+    <link rel="stylesheet" href="/font/fontIcon/css/all.min.css">
+    <!-- thuvien -->
+    <link rel='stylesheet' type='text/css' media='screen' href='css/test.css'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+     <!--footer-->
+     <link rel='stylesheet' type='text/css' media='screen' href='css/testFooter.css'>
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+    <div class="app">   
+        <!-- header -->
+        <header class="header">
+            <div class="grid">
+                <!-- header Navbar -->
+                <nav class="navbar">
+                   <ul class="navbar__list">
+                        <li class="navbar__item navbar__item--has-qr navbar__item--separate">
+                            Vào cửa hàng trên ứng dụng mobile
+                            <div class="header__qr">
+                                <img class="header__qr-img" src="/img/QR.png" alt="">
+                                <div class="header__qr-apps">
+                                    <a href="" class="header__qr-link">
+                                        <img src="/img/appstore.png" alt="" class="header__qr-down-img">
+                                    </a>
+                                    <a href="" class="header__qr-link">
+                                        <img src="/img/ggplay.png" alt="" class="header__qr-down-img">
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="navbar__item">
+                            <span class="navbar__item-no-pointer">
+                                Kết nối
+                            </span>
+                            <a href="" class="navbar__icon-link">
+                                <i class="navbar__icon fab fa-facebook"></i>
+                            </a>
+                            <a href="" class="navbar__icon-link">
+                                <i class="navbar__icon fab fa-instagram"></i>
+                            </a>
+                        </li>
+                        
+                   </ul>
+        
+                   <ul class="navbar__list">
+                        <li class="navbar__item navbar__item--has-notify">
+                            <a href="" class="navbar__item-link">
+                                <i class="navbar__icon fas fa-bell"></i>
+                                Thông báo
+                                <span class="navbar__item-notice"><%- carts.length %></span>
+                            </a>
+        
+                            <div class="header__notify">
+                                <header class="header__notify-header">
+                                    <h3>Thông báo mới nhận</h3>
+                                    
+                                </header>
+        
+                                <ul class="header__notify-list">
+                                    <% carts.forEach((cart) => { %>
+                                        <li class="header__notify-item">
+                                            <a href="" class="header__notify-link header__notify-item--viewed">
+                                                <img src="/upload/<%= cart.img %>" alt="" class="header__notify-img">
+                                                <div class="header__notify-info">
+                                                    <span class="header__notify-name"><%= cart.name %> được thêm thành công vào giỏ</span>
+                                                    <span style="margin-right: auto;" class="header__notify-des"><%= cart.classify %></span>
+                                                </div>
+                                            </a>
+                                        </li>
+                                    <% }) %>
+                                    
+                                </ul>
+                                <footer class="header__notify-footer">
+                                    <a href="" class="header__notify-footer-btn">Xem tất cả</a>
+                                </footer>
+                            </div>
+                        </li>
+                        
+                        <li class="navbar__item">
+                            <a href="" class="navbar__item-link">
+                                <i class="navbar__icon fas fa-question"></i>
+                                Trợ giúp
+                            </a>
+                        </li>
+                        <!-- <li class="navbar__item bold navbar__item--separate">Đăng ký</li>
+                        <li class="navbar__item bold">Đăng nhập</li> -->
+                        <li class="navbar__item navbar__item-user">
+                            <img src="/img/viet.jpg" alt="" class="navbar__item-user-avatar">
+                            <span class="navbar__item-user-name">viet@donga.edu.vn</span>
+        
+                            <ul class="header__navbar-user-menu">
+                                <li class="header__navbar-user-menu-item">
+                                    <a href="">Tài khoản của tôi</a>
+                                </li>
+                                <li class="header__navbar-user-menu-item">
+                                    <a href="">Địa chỉ của tôi</a>
+                                </li>
+                                <li class="header__navbar-user-menu-item">
+                                    <a href="">Đơn mua</a>
+                                </li>
+                                <li class="header__navbar-user-menu-item header__navbar-user-menu-item--separate">
+                                    <a href="http://localhost:3000">Đăng xuất</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+        
+                <div class="header__with-search">
+                    <div class="header__logo">
+                        <a href="/" class="header__logo-link">
+                            <img class="header__logo-img" src="https://img.lovepik.com/element/40020/6683.png_860.png" alt="">
+                        </a>
+                    </div>
+                    <div class="header__search">
+                        <!-- header Input -->
+                        <div class="header__search-input-wrap">
+                            <input placeholder="Search" type="text" class="header__search-input">
+                            <!-- Search history -->
+                            <div class="header__search-history">
+                                <h3 class="header__search-history-heading">
+                                    Lịch sử tìm kiếm
+                                </h3>
+                                <div class="header__search-history-list">
+                                    <li class="header__search-history-item">
+                                        <a href="">Leesin inset bida</a>
+                                    </li>
+                                    <li class="header__search-history-item">
+                                        <a href="">Leesin inset bida</a>
+                                    </li>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                        <!-- header Select -->
+                        <div class="header__search-select">
+                            <span class="search-select__label">Trong Shop</span>
+                            <i class="search-select__icon fas fa-angle-down"></i>
+                            <ul class="header__search-option">
+                                <li class="header__search-option-item header__search-option-item--active">
+                                    <span>Trong Shop</span>
+                                    <i class=" fas fa-check"></i>
+                                </li>
+                                
+                                <li class="header__search-option-item">
+                                    <span>Ngoài Shop</span>
+                                    <i class=" fas fa-check"></i>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- header Search-btn -->
+                        <button class="header__search-btn">
+                            <i class="header__cart-btn-icon fas fa-search"></i>
+                        </button>
+                    </div>
+                    <!-- header Cart -->
+                    <div class="header__cart">
+                        <div class="header__cart-wrap">
+                         
+                              <a href="/cart">
+                                <div class="header__cart-icon-wrap">
+                                    <i class="header__cart-icon fas fa-shopping-cart"></i>
+                                     
+                                    <span class="header__cart-notice"><%- carts.length %></span>
+                                </div>
+                         
+                              </a>
+                            
+                            <!-- No Cart: header__cart-list--no-cart -->
+                            <div class="header__cart-list">
+                                <img src="/img/no-cart.png" alt="" class="cart-list__no-cart-img">
+                                <span class="cart-list__no-cart-msg">Chưa có sản phẩm</span>
+                                <h4 class="cart-list__no-cart-heading">Sản phẩm đã thêm</h4>
+                                        <!-- Cart Item -->
+                                <ul class="header__cart-list-item">
+                                    <% carts.forEach((cart) => { %> 
+                                            <li class="header__cart-item header__cart-item--has-cart">
+                                        <img src="/upload/<%= cart.img %> " alt="" class="header__cart-img">
+                                        <div class="header__cart-item-info">
+                                            <div class="header__cart-item-header">
+                                                <h5 class="header__cart-item-name">
+                                                   <%= cart.name %> 
+                                                </h5>
+                                                <div class="header__cart-item-price-wrap">
+                                                    <span class="header__cart-item-price"><%= cart.price%> đ</span>
+                                                    <span class="header__cart-item-multiply">x</span>
+                                                    <span class="header__cart-item-qnt">2</span>
+                                                </div>
+                                                
+                                            </div>
+                                            <div class="header__cart-item-body">
+                                                <span class="header__cart-item-des">
+                                                    Phân loại: Bạc
+                                                </span>
+                                                <span class="header__cart-item-remove">Xóa</span>
+                                            </div>
+                                        </div>
+                                    </li>
+        
+                                    <%}) %> 
+                                   
+                                  
+                                    
+                                </ul>
+                                <button class="btn btn--activeee header__cart-viewCart">Xem giỏ hàng</button>
+        
+                            </div>
+                        </div>
+                    </div>
+        
+                </div>
+            </div>
+        </header>
+        <div class="headerM" >
+
+            <div class="headerTest2" >
+                <div class="container" >
+                    <div class="row">
+                        <div class="col-sm ">
+                            <a
+                            style="
+                            color: red;
+                        " href="/new">Tin tức mới</a>
+                            
+                        </div>
+                        <div class="col-sm">
+                            <a style="
+                                color: red;
+                            " href="http://localhost:3000/playmusic">Nghe Sách Đọc</a>
+                            
+                        </div>
+                        <div class="col-sm">
+                            <a href="#">Sách kinh doanh</a>
+                            
+                        </div>
+                        <div class="col-sm">
+                            <a href="#">Tiểu Thuyết</a>
+                            
+                        </div>
+                        <div class="col-sm">
+                            <a href="#">Sách trinh thám</a>
+                            
+                        </div>
+                        <div class="col-sm">
+                            <a href="#">Sách kinh Thánh</a>
+                            
+                        </div>
+                        <div class="col-sm">
+                            <a href="#">Sách Giả tưởng</a>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="nen11"> <!-- cái này cái nền thôi-->
+
+            <div class="Box-qv">
+                <div class="slide1-ad1">
+                    <div id="demota1" class="carousel slide CS1" data-ride="carousel">
+                        <ul class="carousel-indicators">
+                            <li data-target="#demota1" data-slide-to="0" class="active"></li>
+                            <li data-target="#demota1" data-slide-to="1"></li>
+                            <li data-target="#demota1" data-slide-to="2"></li>
+                            <li data-target="#demota1" data-slide-to="3"></li>
+    
+                        </ul>
+                        <div class="carousel-inner CI1">
+                            <div class="carousel-item active">
+                                <a href="#"><img src="img\slide\img1.png" alt="anh-slide"></a>                            
+                                <div class="carousel-caption">
+    
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <a href="#"><img src="img\slide\img2.png" alt="anh-slide"></a>                            
+                                <div class="carousel-caption">
+    
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <a href="#"><img src="img\slide\img3.png" alt="anh-slide"></a>                            
+                                <div class="carousel-caption">
+    
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <a href="#"><img src="img\slide\img4.png" alt="anh-slide"></a>                            
+                                <div class="carousel-caption">
+    
+                                </div>
+                            </div>
+    
+                        </div>
+    
+                        <a class="carousel-control-prev" href="#demota1" data-slide="prev" style="width: 70px;">
+                            <span class="carousel-control-prev-icon" style="width: 40px; height: 40px;"></span>
+                        </a>
+                        <a class="carousel-control-next" href="#demota1" data-slide="next" style="width: 70px;">
+                            <span class="carousel-control-next-icon" style="width: 40px; height: 40px;"></span>
+                        </a>
+    
+                    </div>
+                    <div class="ad1-qv">
+                        <img src="https://thuvienmuasam.com/uploads/default/original/2X/2/23e7aa612fba0e616fe1cfff960fba7c61719582.jpeg" alt="Chicago" style="width: 100%; border-radius: 7px;">
+                    </div>
+                </div>
+    
+                <div class="home-dealqv">
+                    <div class="safeqv">
+                        <div class="safeqv-bar">
+                            <div class="safeqv-header">
+                                <img src="https://frontend.tikicdn.com/_desktop-next/static/img/giasoc.svg"
+                                    alt="flash deal">
+                                <img width="21"
+                                    src="https://frontend.tikicdn.com/_desktop-next/static/img/dealFlashIcon.svg"
+                                    alt="flash deal" class="style__Flash-sc-jrvone-0 eBPnHV">
+                                <img src="https://frontend.tikicdn.com/_desktop-next/static/img/homnay.svg"
+                                    alt="flash deal">
+                            </div>
+                        </div>
+                        <div class="safe-child">
+    
+                            <div class="slide2-ad2">
+                                <div id="demota2" class="carousel slide" data-ride="carousel" style="width: 1200px;">                                
+                                    <div class="carousel-inner CI1" style="height: auto;">
+                                        <div class="carousel-item active" >
+                                            <div class="slide-con">
+                                                <a href="#"><img src="img\slide\img2-1.png"  alt="anh-hangHoa"></a>                                            
+                                            </div>
+                                            <div class="slide-con">
+                                                <a href="#"><img src="img\slide\img2-3.png"  alt="anh-hangHoa"></a>   
+                                            </div>
+                                            <div class="slide-con">
+                                                <a href="#"><img src="img\slide\img2-1.png"  alt="anh-hangHoa"></a>   
+                                            </div>     
+                                            <div class="slide-con">
+                                                <a href="#"><img src="img\slide\img2-3.png"  alt="anh-hangHoa"></a>   
+                                            </div>     
+                                            <div class="slide-con">
+                                                <a href="#"><img src="img\slide\img2-1.png"  alt="anh-hangHoa"></a>   
+                                            </div>     
+                                            <div class="slide-con">
+                                                <a href="#"><img src="img\slide\img2-3.png"  alt="anh-hangHoa"></a>   
+                                            </div>     
+                                            
+                                            <div class="carousel-caption">
+    
+                                            </div>
+                                        </div>
+                                        <div class="carousel-item">
+                                            
+                                            <div class="slide-con">
+                                                <a href="#"><img src="img\slide\img2-3.png"  alt="anh-hangHoa"></a>   
+                                            </div>
+                                            <div class="slide-con">
+                                                <a href="#"><img src="img\slide\img2-1.png"  alt="anh-hangHoa"></a>   
+                                            </div>     
+                                            <div class="slide-con">
+                                                <a href="#"><img src="img\slide\img2-3.png"  alt="anh-hangHoa"></a>   
+                                            </div>     
+                                            <div class="slide-con">
+                                                <a href="#"><img src="img\slide\img2-1.png"  alt="anh-hangHoa"></a>   
+                                            </div>     
+                                            <div class="slide-con">
+                                                <a href="#"><img src="img\slide\img2-3.png"  alt="anh-hangHoa"></a>   
+                                            </div>
+                                            <div class="slide-con">
+                                                <a href="#"><img src="img\slide\img2-1.png"  alt="anh-hangHoa"></a>                                            
+                                            </div>
+    
+                                            <div class="carousel-caption">
+    
+                                            </div>
+                                        </div>
+                                        
+    
+                                    </div>
+    
+                                    <a class="carousel-control-prev" href="#demota2" data-slide="prev" style="width: 70px; ">
+                                        <span class="carousel-control-prev-icon" style="width: 40px; height: 80px;  background-color: black; margin-left: -30px;"></span>
+                                    </a>
+                                    <a class="carousel-control-next" href="#demota2" data-slide="next" style="width: 70px; ">
+                                        <span class="carousel-control-next-icon" style="width: 40px; height: 80px;  background-color: black; margin-right: -30px;"></span>
+                                    </a>
+    
+                                </div>
+    
+    
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    
+                
+    
+            </div>
+    
+    
+            
+    
+        </div>
+
+        <!-- container -->
+        <div class="app__container">
+            <div class="grid">
+                <div class="grid__row app-content">
+                    <div class="grid__column-2">
+                        <nav class="category">
+                            <h3 class="category-heading">
+                                Danh mục
+                            </h3>
+
+                            <ul class="category-list">
+                                <li class="category-item category-item--active">
+                                    <a href="#" class="category-item__link">
+                                        Sách Cuộc sống
+                                    </a>
+                                </li>
+                                <li class="category-item">
+                                    <a href="#" class="category-item__link">
+                                        Sách học tập
+                                    </a>
+                                </li>
+                                <li class="category-item">
+                                    <a href="#" class="category-item__link">
+                                        Sách kinh tế
+                                    </a>
+                                </li>
+                                <li class="category-item category-item--active">
+                                    <a href="#" class="category-item__link">
+                                        Truyện nghe siêu hay
+                                    </a>
+                                </li>
+                                <li class="category-item category-item--active">
+                                    <a href="#" class="category-item__link">
+                                        Sách Cuộc sống
+                                    </a>
+                                </li>
+                                <li class="category-item">
+                                    <a href="#" class="category-item__link">
+                                        Sách học tập
+                                    </a>
+                                </li>
+                                <li class="category-item">
+                                    <a href="#" class="category-item__link">
+                                        Sách kinh tế
+                                    </a>
+                                </li>
+                                <li class="category-item category-item--active">
+                                    <a href="#" class="category-item__link">
+                                        Truyện nghe siêu hay
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="grid__column-10">
+                        <div class="home-filter">
+                            <span class="home-filter__lable">Sắp xếp theo</span>
+                            <button class="home-filter__btn btnn">Phổ biến</button>
+                            <button class="home-filter__btn btnn btn--activee">Mới nhất</button>
+                            <button class="home-filter__btn btnn ">Bán chạy</button>
+
+                            <div class="select-input">
+                                <span class="select-input__label">Giá</span>
+                                <i class="select-input__icon fas fa-angle-down"></i>
+                                <ul class="select-input__list">
+                                    <li class="select-input__item">
+                                        <a href="" class="select-input__link">Giá: thấp đến cao</a>
+                                    </li>
+                                    <li class="select-input__item">
+                                        <a href="" class="select-input__link">Giá: cao đến thấp</a>
+                                    </li>
+                                    
+
+                                </ul>
+                            </div>
+                            <div class="home-filter__paginate">
+                                <span class="home-filter__page-num">
+                                    <span class="home-filter__page-current">1</span>/14
+                                </span>
+                                <div class="home-filter__page-control">
+                                    <a href="" class="home-filter__page-btn home-filter__page-btn--disable">
+                                        <i class="home-filter__page-icon fas fa-angle-left"></i>
+                                    </a>
+                                    <a href="" class="home-filter__page-btn">
+                                        <i class="home-filter__page-icon fas fa-angle-right"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="home-product">
+                            <!-- Grid ==> Row ==> Col -->
+                            <div class="grid__row">
+                                <% products.forEach(product => { %>
+                                    <div class="grid__column-2-4">
+                                        <!-- product-item -->
+                                        <div class="home-product-item" >
+                                            
+                                            <div class="home-product-item__img"  style="background-image: url('/upload/<%= product.img %>');"></div>
+                                            <h4 class="home-product-item__name">
+                                                <%= product.name %>
+                                            </h4>
+                                            <div class="home-product-item__price">
+                                                <span class="home-product-item__price-old">300.000 đ</span>
+                                                <span class="home-product-item__price-curr"><%= product.price %> </span><span
+                                                style="
+                                                    color: red;
+                                                    font-size: 14px;
+                                                "
+                                            >đ</span>
+                                            </div>
+                                            <div class="home-product-item__action">
+                                                <span class="home-product-item__like ">
+                                                    <i class="home-product-item__like-icon-empty far fa-heart"></i>
+                                                    <!-- add icon fill liked : home-product-item__like--liked-->
+                                                    <i class="home-product-item__like-icon-fill fas fa-heart"></i>
+                                                </span>
+                                               
+                                                <div class="home-product-item__rating">
+                                                    <i class="home-product-item__star--gold fas fa-star"></i>
+                                                    <i class="home-product-item__star--gold fas fa-star"></i>
+                                                    <i class="home-product-item__star--gold fas fa-star"></i>
+                                                    <i class="home-product-item__star--gold fas fa-star"></i>
+                                                    <i class=" fas fa-star"></i>
+                                                </div>
+                                                <span class="home-product-item__sold">100k Đã bán</span>
+                                            </div>
+                                           
+                                            <div class="home-product-item__favorite">
+                                                <i class="fas fa-check"></i>
+                                                <span>Yêu thích</span>
+                                            </div>
+                                            <div class="home-product-item__sale-off">
+                                                <span class="home-product-item__sale-off__percent"> 30%</span>
+                                                <span class="home-product-item__label">GIẢM</span>
+                                            </div>
+                                           
+                                          
+                                            <form class="form__add-cart" action="/cart" method="POST">
+                                                <input type="hidden" name="cartName" id="" value="<%= product.name %>" />
+                                                <input type="hidden" name="cartImg" id="" value="<%= product.img %>" />
+                                                <input type="hidden" name="cartPrice" id="" value="<%= product.price %>" />
+                                                <input type="hidden" name="cartClassify" id="" value="<%= product.classify %>" />
+                                                <input type="hidden" name="cartQuantity" id="" value="<%= product.quantity %>" />
+                                                <div class="home-product-item__btn">
+                                                    <button type="submit" class="btnn btn--activee home-product-item__btn-buy">
+                                                        <i class="home-product-item__btn-icon fas fa-plus"></i>
+                                                        Thêm vào giỏ hàng
+                                                    </button>
+                                                </div>
+                                            </form>
+                                            
+                        
+                                        </div>
+                                    </div>
+                        
+                                <% }) %>
+                              
+                            
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="grid__row btn__addNewPoroduct">
+                <div class="grid__column-2-4 btn__addNewPoroduct-item">
+                    <button class="btnn btn--activee">Ấn để tải thêm sản phẩm mới</button>
+                </div>
+               
+            </div>
+        </div>
+
+        <footer class="footer-dark"> <!--footer-->
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-6 col-md-3 item">
+                        <h3>Hỗ trợ khách hàng</h3>
+                        <ul>
+                            <li><a href="#">Các câu hỏi thường gặp</a></li>
+                            <li><a href="#">Chính sách đổi trả</a></li>
+                            <li><a href="#">Hotline: 1900-XXXX</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-6 col-md-3 item">
+                        <h3>Về Bookun</h3>
+                        <ul>
+                            <li><a href="#">Giới thiệu Bookun</a></li>
+                            <li><a href="#">Tuyển dụng</a></li>
+                            <li><a href="#">Điều khoản sử dụng</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-6 item text">
+                        <h3>Shop Bookun</h3>
+                        <p style="font-size: 14px;">Nhận đặt hàng trực tuyến và giao hàng tận nơi.
+                            
+                            <br>Giấy chứng nhận Đăng ký Kinh doanh số 0XX98XX98X9 do Sở Kế hoạch và Đầu tư Đại học Đông Á cấp ngày 10/12/2021
+                            
+                            <br>© 2021 - Bản quyền của Công Ty Cổ Phần Bookun - Bookun.nodejs.vn</p>
+                    </div>
+                    <div class="col item social"><a href="#"><i class="icon ion-social-facebook"></i></a><a href="#"><i class="icon ion-social-twitter"></i></a><a href="#"><i class="icon ion-social-snapchat"></i></a><a href="#"><i class="icon ion-social-instagram"></i></a></div>
+                </div>
+                <p class="copyright">Bookun © 2021</p>
+            </div>
+        </footer>
+        
+        
+    </div>
+
+    
+    <!-- , { carts: carts} -->
+
+</body>
+<script>
+    (function() {
+        const $ = document.querySelector.bind(document);
+        const $$ = document.querySelectorAll.bind(document);
+        
+        let modalCart = $(".app__modal--has-cart");
+        let price = $('.home-product-item__price-curr')
+        let prices = $$('.home-product-item__price-curr')
+     
+        
+       
+        const pricesArr = [...prices]
+       const priceNumber =  pricesArr.map((item) => {
+            const number = +item.innerText
+            return item.innerText = number.toLocaleString()
+        })
+       
+    })()
+  
+    var n = 34523453.345
+    // n.toLocaleString()
+
+    
+</script>
+<script src="javascript/home.js"></script>
+
+</html>

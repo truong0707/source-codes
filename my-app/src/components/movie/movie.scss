@@ -1,0 +1,92 @@
+.linkA{
+    text-decoration: none;
+    .movie{
+        width: 280px;
+        margin-bottom: 20px;
+        .movieImg{
+            width: 280px;
+            height: 250px;
+            border-radius: 5px;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            position: relative;
+            img{
+                width: 100%;
+                position:absolute;
+                top: -20px;
+            }
+            &:hover img{
+                opacity: 0.6;
+                animation: zoom 2s ease-in-out;
+            }
+            @keyframes zoom {
+                0% {
+                  transform: scale(1, 1);
+                }
+                50% {
+                  transform : scale(1.1, 1.1);
+                }
+      
+              }
+        }
+        .content{
+            color: white;
+            height: 90px;
+            margin-top: 10px;
+            .nameMovie{
+                text-transform: uppercase;
+                &:hover{
+                    color: red;
+                }
+            }
+            .movieTitle{
+                margin-top: 10px;
+                margin-bottom: 10px;
+                font-size:14px;
+                font-weight:100;
+                color: rgb(134, 131, 131);
+            }
+        }
+        .button{
+            margin-top: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            .btn-title,
+            .btn-play{
+                border-radius: 5px;
+                border: none;
+                height: 44px;
+                width: 100px;
+                background-color:#293139;
+                color: white;
+                cursor: pointer;
+                text-transform: uppercase;
+                font-weight:500;
+              
+            }
+            .btn-play:hover{
+                background-color: red;
+            }
+            .btn-title{
+                width: 150px;
+                .rowTitle{
+                    height: 10px;
+                    width: 100px;
+                    background-color: #dd163b;
+                    border-radius: 5px;
+                    margin: 2px auto 0;
+                    overflow: hidden;
+                    .a{
+                        height: 100%;
+                        width: 30%;
+                        background-color:#484e54;
+                        float: right;           
+    
+                    }
+                }   
+            }
+        }
+    }
+}

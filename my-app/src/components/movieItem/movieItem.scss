@@ -1,0 +1,12 @@
+.boxMovie{
+    width: 100%;
+    display:flex;
+    justify-content: center;
+    .movieItem{
+        display: flex;
+        justify-content: space-between;
+        width: 1200px;  
+        margin-bottom: 40px;
+    }
+  
+}

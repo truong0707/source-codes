@@ -1,0 +1,8 @@
+.color-box{
+    display: inline-block;/*  có thể hiện thị nhiều cái bock trong 1 hàng */
+    width: 200px;
+    height: 200px;
+    border-radius: 20px;
+    transition: all 0.35s ease-in-out 0s;
+    cursor: pointer; /* howver con chuột  */
+}

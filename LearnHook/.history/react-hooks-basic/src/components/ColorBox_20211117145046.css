@@ -1,0 +1,6 @@
+.color-box{
+    display: inline-block;/*  có thể hiện thị nhiều cái bock trong 1 hàng */
+    width: 200px;
+    height: 200px;
+
+}

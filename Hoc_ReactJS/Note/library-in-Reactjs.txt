@@ -1,0 +1,31 @@
+1. antd  (là ứng dụng về UI trong reactJS)
++ Cài thư viên antd dùng lệnh: npm install --save antd
+
+2. thư viên icon trong reactJS:
++ Cài lệnh: npm install --save @ant-design/icons
+
+3. thư viên convert thời gian:
++ Cài lệnh: npm install --save date fns
+
+4. Sử dụng cho phần backend:
++ caif backage: npm install --save react-firebaseui
++  npm install --save firebase
+
+5. tên Database sử dụng
++ npm install --save lodash
+
+6. Để style trong reactJS
++ lệnh:  npm install --save styled-components
+
+7. Để sử dụng router trong reactJS
++ lệnh: npm install --save react-router-dom
+
+8. Thư viên: React components for faster and easier web development. Build your own design system, or start with Material Design.
++ lệnh: npm install @material-ui/core
+
+9. Thư viện: react-axios
+Axios Component for React with child function callback. This is intended to allow in render async requests.
+Lệnh : npm install react-axios
+
+10. video in reactjs
+npm i react-video-js-player

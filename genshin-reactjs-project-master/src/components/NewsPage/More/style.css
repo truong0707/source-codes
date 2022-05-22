@@ -1,0 +1,59 @@
+.more{
+    width: 100%;
+    min-height: 700px;
+    max-height: 1400px;
+    padding-left: 10%;
+    padding-right: 14%;
+    padding-top: 360px;
+    padding-bottom: 200px;
+    background: #f0f0f0;
+}
+.evt_more{
+    width: 100%;
+    height: 200px;
+    background-color: white;
+    margin-top: 3%;
+    padding: 1%;
+    margin-bottom: 5px;
+    position: relative;
+}
+.evt_more:hover{
+    border: 3px solid rgba(57,59,64,0.15);
+}
+
+.evt_more .box{
+    width: 20%;
+    height: 100%;
+    /* background-color: chartreuse; */
+    float: left;
+}
+.box_ev{
+    font-family: Helvetica;
+    font-size: 16px;
+    width: 76%;
+    height: 100%;
+    /* background-color: crimson; */
+    float: left;
+    padding: 1%;
+    margin-bottom: 50px;
+    color: #393b40;
+}
+
+.img1_more{
+    width: 100%;
+    height: 100%;
+}
+.bt_more{
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    background-color: #393b40;
+    border-radius: 4px;
+    opacity: 0.8;
+    text-align: center;
+    font-size: 18px;
+    color: #fff;
+    cursor: pointer;
+    transition: opacity 0.2s linear;
+    margin-top: 20px;
+}

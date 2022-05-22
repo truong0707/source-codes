@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+  <title>Student</title>
+</head>
+<body>
+    <div class="container-fluid bg-dark text-light">
+        <div class="container">
+            <div class="col py-5">
+                <h1><strong>LIST OF STUDENTS</strong></h1>
+                <div class="py-3">
+                    <div class="table-responsive">
+                        <table class="table table-bordered table-dark" id="resTable">
+                            <caption>Danh sách sinh viên</caption>
+                                <thead>
+                                    <tr>
+                                        <th> Mã sinh viên</th>
+                                        <th> Tên sinh viên</th>
+                                        <th> Ngày sinh</th>
+                                        <th> Giới tính</th>
+                                        <th> Tỉnh</th>
+                                        <th> Học bổng</th>
+                                        <th> Class ID</th>
+                                        <th> Object ID</th>
+                                    </tr>
+                                </thead>
+                            <tbody>
+                                <% students.forEach(student => { %>
+                                    <tr>
+                                        <td><%= student.code %></td>
+                                        <td><%= student.name %></td>
+                                        <td><%= student.dob %></td>
+                                        <td><%= student.gender %></td>
+                                        <td><%= student.born %></td>
+                                        <td><%= student.scholarship %></td>
+                                        <td><%= student.classId %></td>
+                                        <td><%= student.id %></td>
+                                    </tr>
+                                <% }) %>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <a class="btn btn-success" href="/student/add" >Add student</a>
+                        <a class="btn btn-success" href="/student/find" >Find student</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,32 @@
+.listMovie{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 30px;
+    span{
+        color: #dd163b;
+    }
+    .space1,
+    .space {
+        display: flex;
+        flex-direction: row;
+        width: 1000px;
+        color: white;
+        font-size: 25px;
+        margin: 0px 0 30px 0px;
+       &:before,
+       &:after {
+            content: "";
+            flex: 1 1;
+            border-bottom: 10px solid  #293139;   ;
+            margin: auto;
+            border-radius:5px;
+            margin: auto 10px;
+        }
+    }
+    .space1{
+        margin: 80px 0 30px 0px;
+    }  
+   
+}

@@ -1,0 +1,15 @@
+.home{
+    position: relative;
+    background-color: #171e22;
+    content: white;
+    overflow: hidden;
+    .spaceList{
+        margin-bottom: 30px;
+    }
+    hr{
+        height: 1px;
+        background-color: #fff;
+        border: none;
+        margin: 0 150px;
+    }
+}

@@ -1,0 +1,63 @@
+
+
+<div style="display: none;" class="app__modal">
+    <div class="modal">
+        <div class="modal__overlay">
+    
+        </div>
+        <div class="modal__body">
+            <div class="modal__inner">
+                
+                    <!-- authen form -->
+                    <div class="add-form">
+                        <div class="add-form__header ">
+                            <h3 class="add-form__heading">Thêm mới sản phẩm</h3>
+                            <i class="add-form__header-icon add-form__close fas fa-times"></i>
+                        </div>
+                        <div class="add-form__container">
+                            <form class="add-form__form" action="/addProduct" method="POST" enctype="multipart/form-data">
+                                <h3 class="add-form__container-heading">Thông tin cơ bản</h3>
+                                <div class="add-form__group">
+                                    <label class="add-form__label" for="">Tên sách:</label>
+                                    <input  class="add-form__input" name="txtName" type="text" placeholder="Nhập tên sản phẩm" ></input>
+                                </div>
+                                <div class="add-form__group">
+                                    <label class="add-form__label" for="">Giá:</label>
+                                    <input class="add-form__input" name="price" type="text" placeholder="Giá sản phẩm">
+                                </div>
+                                
+                                    <div class="add-form__group">
+                                    <label style="margin-top:15px" class="add-form__label" for="">Ảnh của sản phẩm:</label>
+                                    <input  id="img" style="margin-bottom:15px" class="add-form__input-img" name="img" type="file" ></input>
+                                </div>
+                                <div class="add-form__group">
+                                    <label class="add-form__label" for="">Phân loại sách:</label>
+                                    <input class="add-form__input" name="classify" type="text" placeholder="Phân loại sản phẩm"></input>
+                                </div>
+                                <div class="add-form__group">
+                                    <label class="add-form__label" for="">Số lượng:</label>
+                                    <input class="add-form__input" name="quantity" type="text" value="1" min="1" max="10">
+                                </div>
+                                <div class="add-form__group">
+                                    <label class="add-form__label" for="">Mô tả sản phẩm:</label>
+                                    <input class="add-form__input" name="title" type="text">
+                                </div>
+                                
+                                <span class="add-form__label">Bằng việc thêm sản phẩm, bạn đồng ý với chúng tôi về các <a href="">Điều khoảng và dịch vụ </a> & <a href="">Chính sách bảo mật</a></span>
+                                <div class="add-form__group add-form__group-accept">
+                                    <input class="add-form__input-accept" type="checkbox">
+                                    <span>Chấp nhận các điều khoản của dịch vụ</span>
+                                </div>
+                               
+                                <div class="add-form__controls">
+                                    <button class="btnn btn--activee " type="submit">Ấn để thêm sản phẩm</button>
+                                </div>
+                            </form>
+                        </div>
+                        
+                    </div>
+               
+            </div>
+        </div>
+    </div>
+</div>

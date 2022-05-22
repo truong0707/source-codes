@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+  <title>Add student</title>
+</head>
+
+<body>
+  <div class="container-fluid bg-dark text-light">
+    <div class="container">
+      <div class="col py-5">
+        <h1><strong>ADD STUDENT</strong></h1>
+        <div class="py-3">
+          <form method="post">
+            <div class="panel panel-default">
+              <div class="panel-body">
+                <div class="form-group">
+                  <label for="student_code">Student code: </label>
+                  <input type="text" class="form-control" id="student_code" name="student_code" minlength="4"
+                    maxlength="8" placeholder="SV_49481">
+                </div>
+
+                <div class="form-group">
+                  <label for="student_name">Student name: </label>
+                  <input type="text" class="form-control" id="student_name" name="student_name" minlength="8"
+                    maxlength="32" placeholder="Lê Tuấn Lực">
+                </div>
+
+                <div class="form-group">
+                  <label for="student_gender">Student gender: </label>
+                  <input type="text" class="form-control" id="student_gender" name="student_gender" minlength="4"
+                    maxlength="8" placeholder="Male or Female">
+                </div>
+
+                <div class="form-group">
+                  <label for="student_dob">Student dob: </label>
+                  <input type="text" class="form-control" id="student_dob" name="student_dob" minlength="8"
+                    maxlength="32" placeholder="2001-12-31">
+                </div>
+
+                <div class="form-group">
+                  <label for="student_born">Student born: </label>
+                  <input type="text" class="form-control" id="student_born" name="student_born" minlength="8"
+                    maxlength="32" placeholder="TP. Đà Nẵng">
+                </div>
+
+                <div class="form-group">
+                  <label for="student_scholarship">Student scholarship: </label>
+                  <input type="number" class="form-control" id="student_scholarship" name="student_scholarship"
+                    min="0" max="16" placeholder="0">
+                </div>
+
+                <div class="form-group">
+                  <label for="classId">Class ID: </label>
+                  <input type="text" class="form-control" id="classId" name="classId" minlength="8"
+                    maxlength="64" placeholder="61951ad273410326e44f9523">
+                </div>
+
+                <button type="submit" class="btn btn-success">Add student</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,116 @@
+.App {
+  text-align: center;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.Heading {
+  height: 50px;
+  width: 100%;
+  background: pink;
+}
+.Box2Body{
+/*   background: royalblue; */
+  width: 70%;
+  float: right;
+}
+.Box1Body{
+  background: royalblue;
+  width: 610px;
+  float: right;
+
+}
+.AllBody{
+  margin-top: 90px;
+  margin-left: 50px;
+}
+
+.AllFooter{
+  background: #f7f6f2;
+  width: 100%;
+
+}
+.col.boxFooter{
+  margin: 60px;
+}
+
+.AllFooter{
+  height: 450px;
+}
+.Button_Blog{
+  background: #82ae46;
+  color: white;
+  border-radius: 20px;
+  width: 122.17px;
+  height: 42px;
+  border: white;
+  font-size: large;
+}
+.cmt_Blog{
+  color: #808080;
+}
+.BlogHome{
+  text-align:center;
+  font-size: larger;
+}
+.InPut{
+  height: 110px;
+}
+.TitleListBody2A{
+  height: 50px;
+  /* background: burlywood; */
+}
+.TitleCardBody2B{
+  padding-top: 70px;
+}
+.Box2bBody{
+/*   background: rebeccapurple; */
+  width: 90%;
+  font-size: small;
+}
+.ListFooter{
+  background: #f7f6f2;
+  padding-top: 15px;
+}
+.mouse-icon {
+  width: 40px;
+  height: 40px;
+  border: 7px solid rgba(255, 255, 255, 0.7);
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  border-radius: 50%;
+  background: #82ae46;
+  cursor: pointer;
+  position: relative;
+  text-align: center;
+  margin: 0 auto;
+  display: block;
+}

@@ -1,0 +1,142 @@
+.navbar{
+    z-index: 999999;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    color: white;
+    font-size: 14px;
+    background: linear-gradient(to  top, transparent 0%, rgba(0, 0, 0, 0.3) 50%);
+    &.scroll{
+        background-color: #171e22;
+    }
+    .container{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 70px;
+        padding: 10px 50px;
+        img{
+            height: 25px;
+        }
+        .left{
+            display: flex;
+            align-items: center;
+            img{
+                height: 100px;
+                margin-right: 40px;
+            }
+            span{
+                margin-right: 20px;
+                cursor: pointer;
+            }
+            .series{
+                &:hover {
+                    color: red;
+                }
+                &:hover .seriesBox{
+                    display: block;
+                }
+                .seriesBox::before{
+                    content: "";
+                    display: block;
+                    height: 30px;
+                    width: 100px;
+                    position: absolute;
+                    top: 15px;
+                    z-index: 20;
+                }
+                .seriesBox{
+                    
+                    position: absolute;
+                    top: 40px;
+                    display: none;
+                    .subSeries{
+                        .topRow{
+                            height: 1px;
+                            background-color: red;
+                            width: 100%;
+                            position: absolute;
+                        }
+                        display: flex;
+                        flex-direction:row;
+                        justify-content: space-around;
+                        position: absolute;
+                        top: 30px;
+                        left: -20px;
+                        width: 500px;
+                        background-color: #fff;
+                        .listSeries{
+                            background-color: #171e22;
+                            height: 100%;
+                            width: calc(100% / 3);
+                            .itemSeries{
+                                height: 30px;
+                                margin: 5px 0 0 30px;
+                                color: rgb(122, 118, 118);
+                                &:hover{
+                                    color: red;
+                                }
+                            }
+                        }
+                    }
+                    // &:hover .subSeries{
+                    //     display: block;
+                    // }
+                }
+            }
+            }
+           
+        .right{
+            .search{
+                position: relative;
+                &:hover .input{
+                    display: block;
+                }
+                .iconSearch{
+                    
+                }
+                .input{
+                    display: none;
+                    position: absolute;
+                    right: 0;
+                    width: 300px;
+                    height: 30px;
+                }
+            }
+           
+            .icon{
+                margin: 0 15px;
+                cursor:pointer 
+            }
+            display: flex;
+            align-items: center;
+            img{
+                height:30px;
+                width: 30px;
+                border-radius:50%;
+                cursor: pointer;
+            }
+            .profile{
+                position: relative;
+                .options{
+                    background-color:#171e22;
+                    display: none;
+                    border-radius: 5px;
+                    height: 65px;
+                }
+                span{
+                   padding: 10px;
+                   cursor: pointer;
+                }
+                &:hover{
+                    .options{
+                        display: flex;
+                        flex-direction: column;
+                        position: absolute;
+                    }
+                }
+            }
+        }
+    }
+}    
